@@ -5,8 +5,8 @@ const Header = () => {
     return (
         <nav>       
             <IndexLink to="/">Home</IndexLink>
-            <IndexLink to="/about">About</IndexLink>
-            <IndexLink to="/course">course</IndexLink>
+            <Link to="/about">About</Link>
+            <Link to="/course">course</Link>
             </nav>
     );
 };
