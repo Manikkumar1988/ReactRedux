@@ -33,7 +33,7 @@ class CoursesPage extends React.Component {
         return (
             <div>
                 <h1>Courses</h1>
-                {this.props.course.map(this.courseRow)}
+                {this.props.courses.map(this.courseRow)}
                 <h2>Add Course</h2>
                 <input
                 type = "text"
@@ -50,17 +50,14 @@ class CoursesPage extends React.Component {
 }
 CoursesPage.propTypes = {
     dispatch: PropTypes.func.isRequired,
-    course: PropTypes.array.isRequired
+    courses: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
 return {
-    course: state.courses
+    courses: state.courses
 };
 }
 
-function mapDispatchToProps(dispatch) {
 
-}
-
-export default connect(mapStateToProps,mapDispatchToProps) (CoursesPage);
+export default connect(mapStateToProps) (CoursesPage);
